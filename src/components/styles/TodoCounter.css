@@ -1,0 +1,10 @@
+.counter{
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+}
+h2{
+    margin: 10px auto;
+}
