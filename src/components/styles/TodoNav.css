@@ -1,0 +1,23 @@
+.Nav-Todo{
+    margin: 0 auto;
+    padding: 0;
+}   
+.Nav-Todo-ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.Nav-Todo-li{
+    background-color: rgba(5, 143, 255, 1);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Nav-Todo-Completed{
+    background-color: rgba(10, 245, 167, 1);
+}
+.Nav-Todo-Uncompleted{
+    background-color: rgba(5, 143, 255, 1);
+}

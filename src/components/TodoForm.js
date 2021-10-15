@@ -12,15 +12,12 @@ function TodoForm() {
     const onChange = (event) =>{
         setNewTodoValue(event.target.value)
     }
-    const onCancel = () =>{
-        setOpenModal(false);
-    }
     const onSubmit = (event) => {
         event.preventDefault()
         addTodo(newTodoValue)
         setOpenModal(false)
     }
-
+    
     return (  
         <form onSubmit={onSubmit}>
             <label>
@@ -33,13 +30,6 @@ function TodoForm() {
             >
             </textarea>
             <div className="btn-container">
-                <button
-                    className="btn-modal cancel"
-                    type="button"
-                    onClick= {onCancel}
-                >
-                    Cancel
-                </button>
                 <button
                     className="btn-modal add"
                     type="submit"

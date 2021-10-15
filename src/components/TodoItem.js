@@ -3,14 +3,14 @@ import './styles/TodoItem.css'
 
 function TodoItem(props) {
     return (
-			<li className={`${props.completed && 'li-completed'}`}>
-				<p className={`TodoItem-p 
-				${props.completed && 'TodoItem-p-complete'}`}>
+			<li className={`li-item ${props.completed && 'li-completed'}`}>
+				<p
+					className={`TodoItem-p 
+				${props.completed && 'TodoItem-p-complete'}`}
+				>
 					{props.text}
 				</p>
-				<span 
-				className="Icon Icon-Delete" 
-				onClick={props.onDelete}>
+				<span className="Icon Icon-Delete" onClick={props.onDelete}>
 					X
 				</span>
 				<span

@@ -1,4 +1,4 @@
-.CreateToDoBtn{
+.CreateTodoBtn{
     position: fixed;
     z-index: 5;
     top: 90%;
@@ -6,17 +6,25 @@
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     opacity: 0.9;
     color: white;
     font-size: 50px;
     font-weight: bold;
     border-style: unset;
     box-shadow: 0px 0px 19px rgb(111 111 111 / 50%);
-    transform: rotate(0);
-    transition: .1s ease-in;
     cursor: pointer;
 }
-.CreateToDoBtn:hover{
-    transform: rotate(50deg);
+.CreateTodoBtn:active{
+    transition: all 0.1s;
+    transform: scale(1.1);
+}
+.Btn-Cancel{
+    transform: rotate(45deg);
+    transition: .2s ease-in;
+    background-image: linear-gradient(to top right, #ff0844 0%, #ffb199 100%);
+}
+.Btn-Add{
+    transform: rotate(0);
+    transition: .2s ease-in;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }

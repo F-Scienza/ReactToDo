@@ -11,16 +11,20 @@ function TodoProvider(props) {
 		error,
 	} = useLocalStorage('TODOS_V1', []);
 	const [ searchValue, setSearchValue ] = React.useState('');
-
 	const [ openModal, setOpenModal ] = React.useState(false)
 
 	const completedTodos = todos.filter(todo => !!todo.completed).length;
 	const totalTodos = todos.length;
 
 	let searchedTodos = [];
+	let navTodos = [];
+	const [navTodosChecked, setNavTodosChecked] = React.useState(true);
+	navTodosChecked
+		? (navTodos = todos.filter(todo => !todo.completed))
+		: (navTodos = todos.filter(todo => todo.completed));
 
 	if (!searchValue.length >= 1) {
-		searchedTodos = todos;
+		searchedTodos = navTodos;
 	} else {
 		searchedTodos = todos.filter(todo => {
 			const todoText = todo.text.toLowerCase();
@@ -28,6 +32,8 @@ function TodoProvider(props) {
 			return todoText.includes(searchText);
 		});
 	}
+
+
 	const addTodo = (text) => {
 		const newTodos = [...todos];
 		newTodos.push({
@@ -40,7 +46,7 @@ function TodoProvider(props) {
 	const completeTodo = text => {
 		const todoIndex = todos.findIndex(todo => todo.text === text);
 		const newTodos = [...todos];
-		newTodos[todoIndex].completed = true;
+		newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
 		saveTodos(newTodos);
 	};
 	const deleteTodo = text => {
@@ -51,23 +57,28 @@ function TodoProvider(props) {
 	};
 
     return (
-        <TodoContext.Provider value={{
-            loading,
-            error,
-			totalTodos,
-			completedTodos,
-			addTodo,
-			searchValue,
-			setSearchValue,
-			searchedTodos,
-			completeTodo,
-			deleteTodo,
-			openModal,
-			setOpenModal
-        }}>
-            {props.children}
-        </TodoContext.Provider>
-    )
+			<TodoContext.Provider
+				value={{
+					loading,
+					error,
+					totalTodos,
+					completedTodos,
+					addTodo,
+					searchValue,
+					setSearchValue,
+					searchedTodos,
+					completeTodo,
+					deleteTodo,
+					openModal,
+					setOpenModal,
+					navTodosChecked,
+					setNavTodosChecked,
+					navTodos
+				}}
+			>
+				{props.children}
+			</TodoContext.Provider>
+		);
 }
 
 export { TodoContext, TodoProvider }

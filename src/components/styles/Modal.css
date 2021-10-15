@@ -14,8 +14,8 @@
 .Modal-Container{
     width: 400px;
     height: 400px;
-    color: black;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: black; 
+    background-color: rgba(5, 143, 255, 0.9);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
