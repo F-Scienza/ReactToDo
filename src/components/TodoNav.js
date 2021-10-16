@@ -12,8 +12,8 @@ function TodoNav() {
     const sectionTodos = () =>{
         setNavTodosChecked(!navTodosChecked);
         !navTodosChecked
-            ? (setLiText(' ToDos por completar' ,setNavStyle('Nav-Todo-Uncompleted')))
-            : (setLiText('¡ToDos completados!' ,setNavStyle('Nav-Todo-Completed')))
+            ?(setLiText(' ToDos por completar' ,setNavStyle('Nav-Todo-Uncompleted')))
+            :(setLiText('¡ToDos completados!' ,setNavStyle('Nav-Todo-Completed')))
     }
     return (
 			<nav className="Nav-Todo">
