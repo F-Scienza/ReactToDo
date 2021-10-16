@@ -18,18 +18,21 @@ function AppUI() {
 		completeTodo,
 		deleteTodo,
 		openModal,
-		setOpenModal,
+		setOpenModal
 	} = React.useContext(TodoContext);
-
     return (
 			<React.Fragment>
 				<TodoCounter />
 				<TodoSearch />
 				<TodoNav />
 				<TodoList>
-					{error && <p> hubo un error</p>}
-					{loading && <li>estamos cargando</li>}
-					{!loading && !searchedTodos.length && <p>crea tu primer todo</p>}
+					{error && <li className="li-item"> <p>Hubo un error</p> </li>}
+					{loading && <li className="li-item"><p>Estamos cargando</p> </li>}
+					{!loading && !searchedTodos.length && (
+						<li className="li-item">
+							<p>No hay tareas pendientes. <br/> Pulsa el boton y crea una</p>
+						</li>
+					)}
 
 					{searchedTodos.map(todo => (
 						<TodoItem
