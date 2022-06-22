@@ -3,7 +3,7 @@ import './styles/TodoSearch.css'
 import { TodoContext } from './TodoContext';
 
 function TodoSearch() {
-	const { searchValue, setSearchValue } = React.useContext(TodoContext)
+	const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
 	const onsSearchValueChange = (event) => {
 		setSearchValue(event.target.value);
