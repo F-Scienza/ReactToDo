@@ -1,23 +1,19 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
+import { TodoContext } from './TodoContext/index.js';
 import './styles/CreateToDoButton.css';
 function CreateToDoButton(props) {
-    const [isActive, setIsActive] = useState(false)
+	const { openModal, setOpenModal } = React.useContext(TodoContext);
 
-    let buttonClass = isActive
-			? (' Btn-Cancel')
-			: (' Btn-Add');;
-    const createTodoBtn = () =>{
-        props.setOpenModal(prevState => !prevState)
-        setIsActive(!isActive)
+    const handleSetOpenModal = ()=>{
+        setOpenModal(!openModal)
     }
-    return (
-			<button 
-            className={`CreateTodoBtn ${buttonClass}`}
-            onClick={createTodoBtn}
-            >
-				+
-			</button>
-		);
+
+	let buttonClass = openModal ? ' Btn-Cancel' : ' Btn-Add';
+	return (
+		<button className={`CreateTodoBtn ${buttonClass}`} onClick={handleSetOpenModal} >
+			+
+		</button>
+	);
 }
 
 export { CreateToDoButton };
