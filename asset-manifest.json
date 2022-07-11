@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ReactToDoMachine/static/css/main.60a1341b.chunk.css",
-    "main.js": "/ReactToDoMachine/static/js/main.929413c0.chunk.js",
-    "main.js.map": "/ReactToDoMachine/static/js/main.929413c0.chunk.js.map",
-    "runtime-main.js": "/ReactToDoMachine/static/js/runtime-main.2c031b6f.js",
-    "runtime-main.js.map": "/ReactToDoMachine/static/js/runtime-main.2c031b6f.js.map",
-    "static/js/2.41a4781e.chunk.js": "/ReactToDoMachine/static/js/2.41a4781e.chunk.js",
-    "static/js/2.41a4781e.chunk.js.map": "/ReactToDoMachine/static/js/2.41a4781e.chunk.js.map",
-    "index.html": "/ReactToDoMachine/index.html",
-    "static/css/main.60a1341b.chunk.css.map": "/ReactToDoMachine/static/css/main.60a1341b.chunk.css.map",
-    "static/js/2.41a4781e.chunk.js.LICENSE.txt": "/ReactToDoMachine/static/js/2.41a4781e.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/ReactToDoMachine/static/media/pexels-pixabay-273167.83f46ee6.jpg"
+    "main.css": "/F-Scienza/ReactToDo/static/css/main.d633e525.chunk.css",
+    "main.js": "/F-Scienza/ReactToDo/static/js/main.587fd8de.chunk.js",
+    "main.js.map": "/F-Scienza/ReactToDo/static/js/main.587fd8de.chunk.js.map",
+    "runtime-main.js": "/F-Scienza/ReactToDo/static/js/runtime-main.5fd47334.js",
+    "runtime-main.js.map": "/F-Scienza/ReactToDo/static/js/runtime-main.5fd47334.js.map",
+    "static/js/2.41a4781e.chunk.js": "/F-Scienza/ReactToDo/static/js/2.41a4781e.chunk.js",
+    "static/js/2.41a4781e.chunk.js.map": "/F-Scienza/ReactToDo/static/js/2.41a4781e.chunk.js.map",
+    "index.html": "/F-Scienza/ReactToDo/index.html",
+    "static/css/main.d633e525.chunk.css.map": "/F-Scienza/ReactToDo/static/css/main.d633e525.chunk.css.map",
+    "static/js/2.41a4781e.chunk.js.LICENSE.txt": "/F-Scienza/ReactToDo/static/js/2.41a4781e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/F-Scienza/ReactToDo/static/media/pexels-pixabay-273167.83f46ee6.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2c031b6f.js",
+    "static/js/runtime-main.5fd47334.js",
     "static/js/2.41a4781e.chunk.js",
-    "static/css/main.60a1341b.chunk.css",
-    "static/js/main.929413c0.chunk.js"
+    "static/css/main.d633e525.chunk.css",
+    "static/js/main.587fd8de.chunk.js"
   ]
 }
